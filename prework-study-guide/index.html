@@ -15,9 +15,56 @@
       <section class="card" id="html-section"> 
         <h2>HTML</h2> 
         <ul>
-          <li>Enter your HTML notes here</li>
-          <li>The head elements contain information about the webpage.</li>
-          <li>The body element represents the visible content shown to the user.</li>
+          <h3>HTML Tags</h3>
+          <h4>ALL TAGS WILL INCLUDE < ></h4>
+          <li>!--...--  //  defines a comment</li>
+          <li>!DOCTYPE  // defines a document type</li>
+          <li>a  // defines a hyperlink</li>
+          <li>abbr  //  defines an abbreviation or acronym</li>
+          <li>acronym  //  NOT SUPPORTED IN HTML 5.. use abbr instead .. Defines an Acronym </li>
+          <li>address  //  Defines contact information for the author/owner of a document</li>
+          <li>applet  //   NOT SUPPORTED IN HTML 5... USE EMBEDED OR OBJECT INSTEAD... Defines an embedded applet</li>
+          <li>area  //  defines an area inside an image map</li>
+          <li>article  //  defines an article</li>
+          <li>aside  //  Defines content aside from the page content</li>
+          <li>audio  //  Defines embedded sound content</li>
+          <li>b  //  Defines bold text</li>
+          <li>base  //  Specifies the base URL/target for all relative URLs in a document</li>
+          <li>basefront  //  NOT SUPPORTED IN HTML 5... USE CSS INSTEAD...  Specifies a default color,size,and font for all text in a document</li>
+          <li>bdi  //  Isolates part of a text that might be formatted in a different direction from other text outside it</li>
+          <li>bdo  //  Overrides the current text direction</li>
+          <li>big  //  NOT SUPPORTED IN HTML 5...USE CSS INSTEAD... defines big text</li>
+          <li>blockquote  //  Defines a section that is quoted from another source</li>
+          <li>body  //  Defines the document's body</li>
+          <li>br  //  Defines a single line break</li>
+          <li>button  //  Defines a clickable button</li>
+          <li>canvas  //  Used to draw graphics, on the fly, via scripting (usually JavaScript)</li>
+          <li>caption  //  Defines a table caption</li>
+          <li>center  //  NOT SUPPORTED IN HTML 5...USE CSS INSTEAD... Defines centered text</li>
+          <li>cite  //  Defines the title of a work</li>
+          <li>code  //  defines a piece of computer code</li>
+          <li>col  //  Specifies column properties for each column within a colgroup element</li>
+          <li>colgroup  //  Specifies a group of one or more columns in a table for formatting</li>
+          <li>data //  Adds a machine-readable translation of a given content</li> 
+          <li>datalist  //  Specifies a list of pre-defined options for input controls</li> 
+          <li>dd //  Defines a description/value of a term in a decription list</li>
+          <li>del  //  Defines text that has been deleted from a document</li>
+          <li>details  //  Defines additional details that the user can view or hide</li>
+          <li>dfn  //  Specifies a term that is going to be defined within the content</li>
+          <li>dialog  //  Defines a box or window</li>
+          <li>dir  //  NOT SUPPORTED IN HTML5... USE UL INSTEAD... Defines a directory list </li>
+          <li>div  //  Defines a section in a document</li>
+          <li>dl  //  Defines a description list</li>
+          <li>dt  //  Defines a term/name in a description list</li>
+          <li>em  //  Defines emphasized text</li>
+          <li>embeded  //  Defines a container for an external application</li>
+          <li>fieldset  //  Groups related elements in a form</li>
+          <li>figcaption  //  Defines a caption for a figure element</li>
+          <li>font //   NOT SUPPORTED IN HTML5...USE CSS INSTEAD... Defines font, color, and size for text</li>
+          <li>footer  //  Defines a footer for a document or section</li>
+          <li>form  //  Defines an HTML form for user input</li>
+          <li>frame  //  NOT SUPPORTED IN HTML5... Defines a window (a frame) in a frameset</li>
+          <li>frameset //  NOT SUPPORTED IN HTML5... Defines a set of frames</li>
         </ul>
       </section>
       <section class="card" id="css-section">
@@ -29,9 +76,63 @@
     <section class="card" id="git-section">
       <h2>Git</h2>
       <ul>
-        <li>Enter your Git notes here</li>
-        <li>git status: checks what branch we are currently on</li>
+        <h3>SETUP</h3>
+        <h4>Configuring user information used across all local repositories</h4>
+        <li>git config --global user.name "[firstname lastname]" // Sets a name that is identifiable for credit when review version history</li>
+        <li>git config --global user.email "[valid-email]"  // Set an email address that will be associated with each history marker</li>
+        <li>git config --global color.ui auto // set automatic command line coloring for Git for easy reviewing </li>
+      <h3>SETUP and INIT</h3>
+        <li>git init // initialize an existing directory as a Git repository</li>
+        <li>git clone [url] // retrieve an entire repository from a hosted location via URL</li>
+      <h3>STAGE AND SNAPSHOT</h3>
+      <h4>Configure user information used across all local repositories</h4>
+        <li>git status // shows modified files in working directory, staged for your next commit</li>
+        <li>git add [file] // adds a file as it looks now to your commit (stage)</li>
+        <li>git reset [file] // </li>
+        <li> git diff // diff of what is changed but not staged</li>
+        <li> git diff --staged // diff of what is staged but not yet committed</li>
+        <li>git commit -m "[descriptive message]" // commit your staged content as a new commit snapshot</li>
+      <h3>BRANCH AND MERGE</h3>
+      <H4>Isolating work in branches, changing context, and intergrating changes</H4>
+        <li>git branch // lists your branch a* will appear next to the currently active branch</li>
+        <li>git branch [branch-name] // create a new branch at the current commit</li>
+        <li> git checkout // swithch to another branch and check it out into your working directory</li>
         <li>git checkout -b branch name: creates a new branch and switches to it</li>
+        <li>git merge [branch] // merge the specified branch's history into the current one</li>
+        <li>git log // shows all commits in the current branch's history</li>
+      <h3>INSPECT AND COMPARE</h3>
+      <h4>Examining logs, diffs and object information</h4>
+        <li>git log // show the commit history for the currently active branch</li>
+        <li>git log branchB..branchA // show the commits on branchA that are not on branchB</li>
+        <li>git log --follow [file] // show the commits that changed file, even across renames</li>
+        <li>git diff branchB..branchA // show the diff of what is in branchA that is not in branchB</li>
+        <li>git show [SHA] // show any object in Git in human-readable format</li>
+      <h3>TRACKING PATH CHANGES</h3>
+      <h4>Versioning file removes and path changes</h4>
+        <li>git rm [file] // delete the file from project and stage the removal for commit</li>
+        <li>git mv [existing-path] [new-path] // change an existing path and stage the move</li>
+        <li>git log --stat -M // show all commit logs with indication of any paths that moved</li>
+      <h3>IGNORING PATTERNS</h3>
+      <h4>Preventing unintentional staging or commiting of files</h4>
+        <li>logs/*.notespattern*/  // save a file with desired patterns as .gigignore with either direct string matches or wildcard globs</li>
+        <li>git config --global core.excludefile [file] // system wide ignore pattern for all local repositories</li>
+      <h3>SHARE AND UPDATE</h3>
+      <h4>Retrieving updates from another repository and updating local repos</h4>
+        <li>git remote add [alias] [url] // add a git URL as an alias</li>
+        <li>git fetch [alias] // fetch down all the branches from that Git remote</li>
+        <li>git merge [alias]/[branch] // merge a remote branch into your current branch and bring it up to date</li>
+        <li>git push [alias] [branch] // Transmit local branch comnmits to the remote repositry branch</li>
+        <li>git pull // fetch and merge any commits from the tracking remote branch</li>
+      <h3>REWRITE HISTORY</h3>
+      <h4>Rewriting branches, updating commits and clearing history</h4>
+        <li>git rebase [branch] // apply any commits of current branch ahead of specified one</li>
+        <li>git reset --hard [commit] // clear staging area, rewrite working tree from specified commit</li>
+      <h3>TEMPORARY COMMITS</h3>
+      <h4>Temporarily store modified, tracked files in order to change branches</h4>
+        <li>git stash // Save modified and staged changes</li>
+        <li>git stash list // list stack-order of stashed file changes</li>
+        <li>git stash pop // write working from top of stash stack</li>
+        <li>git stash drop // discard the changes from top of stash stack</li>
       </ul>
     </section>
     <section class="card" id="javascript-section">
