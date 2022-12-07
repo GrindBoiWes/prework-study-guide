@@ -142,7 +142,27 @@
       <section class="card" id="css-section">
         <h2>CSS</h2>
         <ul>
-          <li>Enter your CSS notes here</li>
+          <h3>Terms and Definitions</h3>
+          <li>Comment  //  A comment has no effect on the display of the page that's styled, its for the CSS author read and better understand the code. Comments are universal to all programing related languages. example /*this is an old IE6 hack */</li>
+          <li>Style Rule  //  A style rule (also called a set) is a single section of CSS including the selector, the curly braces, and the different lines with properties and values.</li>
+          <li>Declaration Block  //  A decloration block is the section of CSS where the property/value pairs appear.</li>
+          <li>Declaration  //  A declaration is generally any single line of CSS that appears between the curly braces, whether shorthand or longhand.</li>
+          <li>Property  //  A property is what appears before the colon in any line of CSS.</li>
+          <li>Value  //  A value is what appears immediately after the colon in any line of CSS.</li>
+          <li>Selector  //  A selector is the part of the CSS line that selects what element to target with the property/value pair. EX #container #box { width: 200px }</li>
+          <li>Element Type Selector  //  An element selector is a selector that targets an element by the tag name. The selector in the example below is an element type selector, because it doesn't use a class, ID, or other selector to apply the given styles. nav {}</li>
+          <li>Class Selector  //  The selector in the example targets an element by its class name. EX /* matches HTML element with class="navigation" */ .navigation {}</li>
+          <li>ID Selector  //  The selector in the example targets an element by its ID. So every element with an ID of "navigation" will receive the styles in question. Ex /* matches HTML element with id="navigation"  #navigation {}</li>
+          <li>Universal Selector  //  The universal selector matches any element within the context in which it's placed in a selector. In the example, the * character is the universal selector. EX /* the asterisk character is the universal selector */  .navigatoin ul * {}  So any elements that appear as a child descendant of the unorderlist element insande an element that has a class of "navigation" will receive the declared styles. Universal selectors are generally discouraged for performance reasons.</li>
+          <li>Attribute Selector  //  An attribute selector selcts an element to style based on an attribute and/or attribute value. EX /* matches element with style ="[anything]" */ p[style] // 2nd EX /* matches input elements with type ="text" */ input[type="text"] </li>
+          <li>Pseudo-Class  //  A pseudo-class works similary to a regular CSS class, except it's not explicitily declared in the HTML. EX /* the word "hover" along with the preceding colon is the PC */ a:hover / A PC always has a single colon followed by a keyword of some sort, with no space before or after the colon</li>
+          <li>Pseudo-Element  //  A PE is not exactly the same as a PC. While a PC matches elements that actually exist, PE target "virtual" elements that can change depending on the actual HTML. CSS2 PE use a single colon, and CSS3 PE use a double colon</li>
+          <li>Cominator  //  A combinator is the character in a selector that connects two selectors together. There are FOUR types of combinators. These four combinators help create descendant selectors (with a space character), child selectors (with the ">"character, adjacent sibling selectors (with the "+" character), and general sibling selectors (with the "~"character). EX div p  /  div>p  /  div+p  /  div~p</li>
+          <li>At-Rule  //  An at-rule is an instruction given in a CDD document using the @ character. An at-rule could have a declaration block or a simple string of text.  EX @import url(secondary.css)  @media print {}</li>
+          <li>Statement  //  A statement in CSS is any at-rule or rule set.</li>
+          <li>Identifier  //  An identifier can be anything that appears as a property, id, class, keyword value, and at-rule  EX /* "body" , "background", "none", and "font-size" are identifiers</li>
+          <li>Keyword  //  A keyword is a value for a property and is somewhat like a reserved word for a particular property. Different properties have different keywords, and all properties allow the keyworkd "inherit" EX #container { height: auto; /* "auto" is a keyword */}</li>
+
         </ul>
     </section>
     <section class="card" id="git-section">
@@ -210,8 +230,103 @@
     <section class="card" id="javascript-section">
       <h2>JavaScript</h2>
       <ul>
-        <Li>Enter your JavaScript notes here</Li>
-      </ul>
+      <h3>JavaScript Variables</h3>
+        <li>var: The most used variable. Can be reassigned but only accessed within a function, meaning function scope. Variable defined with var move to the top when code is executed.</li>
+        <li>const: Cannot be reassigned and not accessible before they appear within the code, meaning block scope.</li>
+        <li>let: simliar to const with block scope, however the let variable can be reassigned but not re-declared.</li>
+      <h3>Date Types</h3>
+        <li>Numbers:var age = 33</li>
+        <li>Variables: var a</li>
+        <li>Text (strings): var a = "Sachin"</li>
+        <li>Operations: var b = 4 + 5 + 6</li>
+        <li>True or False Statements: var a = true</li>
+        <li>Constant Numbers: const PI - 3.14</li>
+        <li>Objects: var fullName = {firstName: "Sachin", lastName: "Samal"} </li>
+      <h3>Objects</h3>
+        <li>This is a simple example of objects in JS. This object describe the variable car, and includes KEYS or PROPERTIES such as make, model, and year. Each property has a value such as Nissan, Altima, and 2022. A JS object is a collection of properties with values, and it functions as a method.</li>
+        <li>Example : 
+          var car = {
+            make:"Nissan",
+            model:"Altima",
+            year:2022,
+          };
+        </li>
+      <h3>Comparison operators</h3>
+        <li>==: is equal to</li>
+        <li>===: is equal value and equal type</li>
+        <li>!=: is NOT equal</li>
+        <li>!==: is NOT equal to value or not equal type</li>
+        <li>>: is greater than</li>
+        <li><: is less than</li>
+        <li>>==: is greater than or equal to</li>
+        <li><==: is less than or eqaul to</li>
+        <li>?: Ternary operator</li>
+      <h3>Logical Operators</h3>
+        <li>&&: Logical AND</li>
+        <li>||: Logical OR</li>
+        <li>!: Logical NOT</li>
+      <h3>Output Data</h3>
+        <li>alert()  //  Output data in an alert box in the browser window</li>
+        <li>confirm()  //  Open up a yes/no dialog and return true/false depending on user click</li>
+        <li>console.log()  //  Write information to the browser console. Good for debugging</li>
+        <li>document.write()  //  Write directly to the HTML document</li>
+        <li>prompt  //  Create a dialog for user input</li>
+      <h3>Array methods</h3>
+      <h4>Array: An object that can hold multiple values at once</h4>
+        <li>concat()  //  Join serveral arrays into one</li>
+        <li>indexOf()  //  Return the primitive value of the specified object</li>
+        <li>join()  //  Combine elements of an array into a single string and return the string</li>
+        <li>lastIndexOf()  //  Give the last position at which a given element appears in an array</li>
+        <li>pop()  //  Remove the last element of an array</li>
+        <li>push()  //  Add a new element at the end</li>
+        <li>reverse()  //  Sort elements in descending order</li>
+        <li>shift()  //  Remove the first element of an array</li>
+        <li>slice()  //  Pull a copy of a portion of an array into a new array</li>
+        <li>toString()  //  Convert elements to strings</li>
+        <li>unshift()  //  Add a new element to the beginning</li>
+        <li>valueOf()  //  Return the first position at which a given element appears in an array</li>
+      <h3>JavaScript Loops</h3>
+      <h4>Loops: Perform Specific tasks repeatedly under applied conditions.</h4>
+        <li>Example:
+        for (before loop; condition for loop; execute after loop) {
+          // what to do during the loop
+          }
+        </li>
+        <li>for //  creates a conditional loop</li>
+        <li>while  //  Sets up conditions under which a loop executes at least once, as long as the specified condition is evaluated as true</li>
+        <li>do while  //  Similar to the while loop, it exectures at least once and perfroms a check at the end to see if the condition is met. If it is, then it executes again</li>
+        <li>break  //  Stop and exit the cycle at certain conditions</li>
+        <li>continue  //  Skips part of the cycle if certain conditions are met</li>
+      <h3>if-else statements</h3>
+      <h4>An if statement exectues the code within brackets as long as the condition in parenthesis is true. Failing that, an optional else statement is exectued instead.</h4>
+        <p>Example 
+          if (condition) {
+            // do this if condition is met
+            } else {
+            // do this if condition is not met
+            }
+          </p>
+      <h3>Strings</h3>
+      <h4>String Methods</h4>
+        <li>charAt()  //  Return a character at a specified position inside a string</li>
+        <li>charCodeAt()  //  Give the Unicode of the character at that position</li>
+        <li>concat()  //  Join two or more strings into one</li>
+        <li>fromCharCode()  //  Return a string created from the specified sequence of UTF-16 code units</li>
+        <li>indexOf()  // Provide the position of the first occurrence of a specified text within a string</li>
+        <li>lastIndexOf()  //  Same as iO, but with the last occurrence, searching backwards</li>
+        <li>match()  //  Retrieve the matches of a string against a search pattern</li>
+        <li>replace()  //  Find and replace specified text in a string</li>
+        <li>search()  //  Execute a search for a matching text and return its position</li>
+        <li>slice()  //  Extract a section of a string and return it as a new string</li>
+        <li>split()  //  Split a string object into an array of strings at a specified position</li>
+        <li>subtr()  //  Extract a substring depending on a specified number of characters, similar to slice</li>
+        <li>substring()  //  Can't accept negative indices, also simlar to slice</li>
+        <li>toLowerCase()  //  Convert strings to lower case</li>
+        <li>toUpperCase()  //  Convert strings to upper case</li>
+        <li>valueOf()  //  Return the primitive value (that has no properties or methods) of a string object</li>
+      <h3>Number Methods</h3>
+        <li></li>
+      </ul> 
     </section>
     </main>
 
